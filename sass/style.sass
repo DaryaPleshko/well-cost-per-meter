@@ -1,0 +1,193 @@
+$primary-dark: #0d274d
+$primary-light: #00bceb
+$success-green: #28a745
+$text-dark: #282828
+$text-gray: #555
+$white: #fff
+$bg-light: #f5f7fa
+$btn-hover: #00a8d4
+$border-color: #0d274d
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    min-height: 100vh
+    display: flex
+    align-items: center
+    justify-content: center
+    padding: 24px 16px
+    font-family: Montserrat, Arial, sans-serif
+    font-size: 15px
+    color: #000
+    background: $bg-light
+
+.pricing
+    display: flex
+    flex-direction: column
+    align-items: center
+    gap: 16px
+    width: 100%
+    max-width: 340px
+
+.card
+    display: flex
+    flex-direction: column
+    width: 100%
+    background: $white
+    border: 1px solid $border-color
+    border-radius: 8px
+    overflow: hidden
+    box-shadow: 0 4px 12px rgba(13, 39, 77, 0.12)
+
+.card-header
+    padding: 15px 20px
+    background: $primary-dark
+    border-bottom: 1px solid rgba($white, 0.2)
+
+    h2
+        color: $white
+        font-size: 15px
+        font-weight: 700
+        text-align: center
+
+.content
+    display: flex
+    flex: 1
+    flex-direction: column
+    padding: 16px 20px 24px
+
+.card-top
+    display: flex
+    flex-direction: column
+
+.features
+    list-style: none
+    margin-bottom: 20px
+    color: $text-gray
+
+    li
+        margin-bottom: 10px
+        padding-left: 25px
+        background: url("../aseets/mark.svg") no-repeat left 2px
+        background-size: 15px
+
+        &:last-child
+            margin-bottom: 0
+
+.prices 
+    margin-top: 28px
+
+.price-label
+    text-align: center
+    margin-bottom: 4px
+
+.price
+    text-align: center
+
+.price-value
+    font-size: 20px
+    font-weight: 900
+    color: $success-green
+
+.content hr
+    width: 100%
+    max-width: 238px
+    margin: 16px auto 12px
+    border: none
+    border-top: 1px solid $primary-light
+
+.depths
+    display: flex
+    gap: 16px
+    margin-bottom: 24px
+
+.depths-col
+    display: flex
+    flex: 1
+    flex-direction: column
+    gap: 8px
+
+.depths a
+    padding-left: 15px
+    color: $text-dark
+    font-size: 15px
+    line-height: 24px
+    font-weight: 400
+    text-decoration: underline
+    background: url("../aseets/vector.svg") no-repeat left center
+
+    &:hover
+        color: $primary-light
+        text-decoration: none
+
+.btn
+    display: block
+    width: 100%
+    max-width: 250px
+    margin: auto auto 0
+    padding: 12px 13px
+    background: $primary-light
+    color: $white
+    font-weight: 700
+    text-align: center
+    text-decoration: none
+    border-radius: 6px
+    transition: box-shadow 0.2s ease, background 0.2s ease
+
+    &:hover
+        background: $btn-hover
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+
+@media (min-width: 768px) and (max-width: 1023px)
+    body
+        padding: 32px 24px
+
+    .pricing
+        max-width: 580px
+        gap: 20px
+
+    .card-header
+        padding: 15px 32px
+
+        h2
+            font-size: 16px
+
+    .content
+        padding: 20px 32px 28px
+
+    .depths a
+        font-size: 16px
+
+@media (min-width: 1024px)
+    body
+        padding: 20px
+
+    .pricing
+        display: grid
+        grid-template-columns: repeat(3, 1fr)
+        gap: 0
+        max-width: 928px
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25)
+
+    .card
+        border-radius: 0
+        box-shadow: none
+
+        & + .card
+            border-left: none
+
+    .card-header
+        padding: 15px 46px
+
+    .content
+        padding: 16px 24px 24px
+
+    .card-top
+        flex: 1
+        min-height: 190px
+
+    .depths
+        min-height: 88px

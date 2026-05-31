@@ -1,0 +1,225 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    font-family: Montserrat, Arial, sans-serif;
+    font-size: 15px;
+    color: #000;
+    background: #f5f7fa;
+}
+
+.pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    width: 100%;
+    max-width: 340px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border: 1px solid #0d274d;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(13, 39, 77, 0.12);
+}
+
+.card-header {
+    padding: 15px 20px;
+    background: #0d274d;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.card-header h2 {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    padding: 16px 20px 24px;
+}
+
+.card-top {
+    display: flex;
+    flex-direction: column;
+}
+
+.features {
+    list-style: none;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.features li {
+    margin-bottom: 10px;
+    padding-left: 25px;
+    background: url("../aseets/mark.svg") no-repeat left 2px;
+    background-size: 15px;
+}
+
+.features li:last-child {
+    margin-bottom: 0;
+}
+
+.prices .price-label+.price-label {
+    margin-top: 12px;
+}
+
+.price-label {
+    text-align: center;
+    margin-bottom: 4px;
+}
+
+.price {
+    text-align: center;
+}
+
+.price-value {
+    font-size: 20px;
+    font-weight: 900;
+    color: #28a745;
+}
+
+.content hr {
+    width: 100%;
+    max-width: 238px;
+    margin: 16px auto 12px;
+    border: none;
+    border-top: 1px solid #00bceb;
+}
+
+.depths {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.depths-col {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.depths a {
+    padding-left: 15px;
+    color: #282828;
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    text-decoration: underline;
+    background: url("../aseets/vector.svg") no-repeat left center;
+}
+
+.depths a:hover {
+    color: #00bceb;
+    text-decoration: none;
+}
+
+.btn {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    margin: auto auto 0;
+    padding: 12px 13px;
+    background: #00bceb;
+    color: #fff;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: box-shadow 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+    background: #00a8d4;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    body {
+        padding: 32px 24px;
+    }
+
+    .pricing {
+        max-width: 580px;
+        gap: 20px;
+    }
+
+    .card-header {
+        padding: 15px 32px;
+    }
+
+    .card-header h2 {
+        font-size: 16px;
+    }
+
+    .content {
+        padding: 20px 32px 28px;
+    }
+
+    .depths a {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1024px) {
+    body {
+        padding: 20px;
+    }
+
+    .pricing {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
+        max-width: 928px;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    .card {
+        border-radius: 0;
+        box-shadow: none;
+    }
+
+    .card+.card {
+        border-left: none;
+    }
+
+    .card-header {
+        padding: 15px 46px;
+    }
+
+    .content {
+        padding: 16px 24px 24px;
+    }
+
+    .card-top {
+        flex: 1;
+        min-height: 190px;
+    }
+
+    .prices {
+        margin-top: 28px;
+    }
+
+    .depths {
+        min-height: 88px;
+    }
+}
